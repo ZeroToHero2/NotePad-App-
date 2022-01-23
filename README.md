@@ -1,4 +1,4 @@
 # NotePad-App-
-Simple NotePad App with JavaScript HTML and CSS
+- Simple NotePad App with JavaScript HTML and CSS
 # Author
-Bahadır Ünal 👍
+- Bahadır Ünal [Profile](https://github.com/ZeroToHero2). 👍
