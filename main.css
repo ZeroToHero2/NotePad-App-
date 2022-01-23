@@ -16,9 +16,9 @@ body{
     background-image: linear-gradient(to bottom right,
     var(--main-color-light),var(--accent-color-light));
     background-repeat: no-repeat;  
-    /*backround imageın arkada art arda tekrarlamasını engeller   */
+    /*prevent repetition of backround image*/
     min-height: 100vh;
-    /*backround imageın minimum yüksekliğini ayarlayarak tüm sayfayı kaplamasını sağlar.*/
+    /*adjust min height to cover all of the screen*/
 }
 .main-title {
     font-size: 2rem;
