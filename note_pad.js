@@ -1,12 +1,11 @@
 const newMission = document.querySelector('.input-mission');
 const newMissionAddBtn = document.querySelector('.btn-mission-add');
 const missionList = document.querySelector('.mission-list');
-//const missiondeneme = document.getElementById("add1");
 
 newMissionAddBtn.addEventListener('click', newMissionAdd);
 missionList.addEventListener('click', missionDeletedCompleted);
 document.addEventListener('DOMContentLoaded', scanLocalStorage);
-//missiondeneme.addEventListener('click', trialf);
+
 
 function missionDeletedCompleted(e) {
     const clickedComponent = e.target;
@@ -54,7 +53,7 @@ function scanLocalStorage() {
 }
 function deleteFromLocalStorage(mission) {
     let missions = localStoragetoArray();
-    //,tem deletion with suplice
+    //item deletion with suplice
     const deletedMissionIndex = missions.indexOf(mission);
     console.log(deletedMissionIndex);
     missions.splice(deletedMissionIndex, 1);
@@ -68,28 +67,22 @@ function missionItemCreate(mission) {
     const missionLi = document.createElement('li');
     missionLi.classList.add('mission-description');
     missionLi.innerText = mission;
-    // li yi divin içine ekledik.
     missionDiv.appendChild(missionLi);
-    //ul ye oluşturduğumuz div i ekleme
-    //missionList.appendChild(missionDiv);
 
-    //tamamlandı button ekle
     const missionCompletedBtn = document.createElement('button');
     missionCompletedBtn.classList.add('mission-btn');
-    // missionCompletedBtn.classList.add('input-mission')
     missionCompletedBtn.classList.add('mission-btn-completed');
     missionCompletedBtn.innerHTML = '<i class="fas fa-check-double"></i>';
-    //div e ekle
+
     missionDiv.appendChild(missionCompletedBtn);
-    // sil button ekle
+    
     const missionDeletedBtn = document.createElement('button');
     missionDeletedBtn.classList.add('mission-btn');
     missionDeletedBtn.setAttribute("id", "sil1");
     missionDeletedBtn.classList.add('mission-btn-delete');
     missionDeletedBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
-    //div e ekle
+
     missionDiv.appendChild(missionDeletedBtn);
-    //ulye oluşturduğumuz div i ekle.
     missionList.appendChild(missionDiv);
 
 
